@@ -1,0 +1,207 @@
+2025-01-07T06:50:40.077Z: [31merror[39m: Error retrieving posts: Post.find is not a function
+2025-01-07T06:51:00.895Z: [31merror[39m: Error retrieving posts: Post.find is not a function
+2025-01-07T06:51:00.905Z: [31merror[39m: 500 - Post.find is not a function - /api/posts - GET - ::1
+2025-01-07T06:52:50.768Z: [32minfo[39m: Retrieved posts with filters: {}
+2025-01-07T06:52:55.024Z: [32minfo[39m: Retrieved posts with filters: {}
+2025-01-07T06:54:47.561Z: [31merror[39m: 500 - The bucket you are attempting to access must be addressed using the specified endpoint. Please send all future requests to this endpoint. - /api/posts - POST - ::1
+2025-01-07T06:56:26.918Z: [31merror[39m: 500 - The bucket you are attempting to access must be addressed using the specified endpoint. Please send all future requests to this endpoint. - /api/posts - POST - ::1
+2025-01-07T06:57:48.999Z: [31merror[39m: 500 - The bucket you are attempting to access must be addressed using the specified endpoint. Please send all future requests to this endpoint. - /api/posts - POST - ::1
+2025-01-07T06:58:56.425Z: [31merror[39m: 500 - The bucket you are attempting to access must be addressed using the specified endpoint. Please send all future requests to this endpoint. - /api/posts - POST - ::1
+2025-01-07T06:59:55.901Z: [31merror[39m: 500 - The bucket you are attempting to access must be addressed using the specified endpoint. Please send all future requests to this endpoint. - /api/posts - POST - ::1
+2025-01-07T07:05:12.255Z: [31merror[39m: 500 - The bucket you are attempting to access must be addressed using the specified endpoint. Please send all future requests to this endpoint. - /api/posts - POST - ::1
+2025-01-07T07:05:52.642Z: [31merror[39m: 500 - The bucket does not allow ACLs - /api/posts - POST - ::1
+2025-01-07T07:09:27.670Z: [32minfo[39m: Creating post with body: {"title":"Sample Post Title","desc":"Sample post description","tags":"[\"Tag1\",\"Tag2\"]"}
+2025-01-07T07:09:27.705Z: [31merror[39m: Error creating post: Post validation failed: tags.0: Cast to [ObjectId] failed for value "`[ '["Tag1","Tag2"]' ]`" (type string) at path "tags.0" because of "CastError"
+2025-01-07T07:09:27.709Z: [31merror[39m: 400 - Post validation failed: tags.0: Cast to [ObjectId] failed for value "`[ '["Tag1","Tag2"]' ]`" (type string) at path "tags.0" because of "CastError" - /api/posts - POST - ::1
+2025-01-07T07:09:44.058Z: [32minfo[39m: Creating post with body: {"title":"Sample Post Title","desc":"Sample post description","tags":"[Tag1,Tag2]"}
+2025-01-07T07:09:44.064Z: [31merror[39m: Error creating post: Post validation failed: tags.0: Cast to [ObjectId] failed for value "[ '[Tag1,Tag2]' ]" (type string) at path "tags.0" because of "CastError"
+2025-01-07T07:09:44.066Z: [31merror[39m: 400 - Post validation failed: tags.0: Cast to [ObjectId] failed for value "[ '[Tag1,Tag2]' ]" (type string) at path "tags.0" because of "CastError" - /api/posts - POST - ::1
+2025-01-07T07:09:55.380Z: [32minfo[39m: Retrieved tags
+2025-01-07T07:11:14.314Z: [31merror[39m: Error creating tag: Tag name is required
+2025-01-07T07:11:14.322Z: [31merror[39m: 500 - Tag name is required - /api/tags - POST - ::1
+2025-01-07T07:11:36.758Z: [31merror[39m: Error creating tag: Tag name is required
+2025-01-07T07:11:36.763Z: [31merror[39m: 500 - Tag name is required - /api/tags - POST - ::1
+2025-01-07T07:12:01.984Z: [31merror[39m: Error creating tag: Tag name is required
+2025-01-07T07:12:02.013Z: [31merror[39m: 500 - Tag name is required - /api/tags - POST - ::1
+2025-01-07T07:13:14.019Z: [32minfo[39m: Tag created: 677cd409bc550f933a3e48f7
+2025-01-07T07:13:23.738Z: [31merror[39m: Error creating tag: E11000 duplicate key error collection: Postify.tags index: name_1 dup key: { name: "software-development" }
+2025-01-07T07:13:23.742Z: [31merror[39m: 500 - E11000 duplicate key error collection: Postify.tags index: name_1 dup key: { name: "software-development" } - /api/tags - POST - ::1
+2025-01-07T07:13:37.807Z: [32minfo[39m: Retrieved tags
+2025-01-07T07:14:00.044Z: [32minfo[39m: Creating post with body: {"title":"Sample Post Title","desc":"Sample post description","tags":"[\"677cd409bc550f933a3e48f7\"]"}
+2025-01-07T07:14:00.051Z: [31merror[39m: Error creating post: Post validation failed: tags.0: Cast to [ObjectId] failed for value "`[ '["677cd409bc550f933a3e48f7"]' ]`" (type string) at path "tags.0" because of "CastError"
+2025-01-07T07:14:00.053Z: [31merror[39m: 400 - Post validation failed: tags.0: Cast to [ObjectId] failed for value "`[ '["677cd409bc550f933a3e48f7"]' ]`" (type string) at path "tags.0" because of "CastError" - /api/posts - POST - ::1
+2025-01-07T07:14:15.049Z: [32minfo[39m: Creating post with body: {"title":"Sample Post Title","desc":"Sample post description","tags":"[677cd409bc550f933a3e48f7]"}
+2025-01-07T07:14:15.053Z: [31merror[39m: Error creating post: Post validation failed: tags.0: Cast to [ObjectId] failed for value "[ '[677cd409bc550f933a3e48f7]' ]" (type string) at path "tags.0" because of "CastError"
+2025-01-07T07:14:15.056Z: [31merror[39m: 400 - Post validation failed: tags.0: Cast to [ObjectId] failed for value "[ '[677cd409bc550f933a3e48f7]' ]" (type string) at path "tags.0" because of "CastError" - /api/posts - POST - ::1
+2025-01-07T07:15:58.562Z: [32minfo[39m: Creating post with body: {"title":"Sample Post Title","desc":"Sample post description","tags":"[\"677cd409bc550f933a3e48f7\"]"}
+2025-01-07T07:15:58.613Z: [31merror[39m: Error creating post: Post validation failed: tags.0: Cast to [ObjectId] failed for value "`[ '["677cd409bc550f933a3e48f7"]' ]`" (type string) at path "tags.0" because of "CastError"
+2025-01-07T07:15:58.615Z: [31merror[39m: 400 - Post validation failed: tags.0: Cast to [ObjectId] failed for value "`[ '["677cd409bc550f933a3e48f7"]' ]`" (type string) at path "tags.0" because of "CastError" - /api/posts - POST - ::1
+2025-01-07T07:18:41.047Z: [32minfo[39m: Post created: 677cd550c4a9654f2043462f
+2025-01-07T07:23:54.617Z: [32minfo[39m: Retrieved posts with filters: {}
+2025-01-07T07:25:04.244Z: [32minfo[39m: Retrieved posts with filters: {}
+2025-01-07T07:26:08.661Z: [31merror[39m: Error creating tag: E11000 duplicate key error collection: Postify.tags index: name_1 dup key: { name: "software-development" }
+2025-01-07T07:26:08.664Z: [31merror[39m: 500 - E11000 duplicate key error collection: Postify.tags index: name_1 dup key: { name: "software-development" } - /api/tags - POST - ::1
+2025-01-07T07:28:12.098Z: [31merror[39m: Error creating tag: Tag with this name already exists
+2025-01-07T07:28:12.126Z: [31merror[39m: 409 - Tag with this name already exists - /api/tags - POST - ::1
+2025-01-07T07:28:17.460Z: [31merror[39m: Error creating tag: Tag with this name already exists
+2025-01-07T07:28:17.462Z: [31merror[39m: 409 - Tag with this name already exists - /api/tags - POST - ::1
+2025-01-07T07:29:15.021Z: [31merror[39m: Error creating tag: Tag with this name already exists
+2025-01-07T07:29:15.035Z: [31merror[39m: 409 - Tag with this name already exists - /api/tags - POST - ::1
+2025-01-07T07:29:23.608Z: [32minfo[39m: Retrieved tags
+2025-01-07T07:29:28.316Z: [32minfo[39m: Retrieved tags
+2025-01-07T07:29:33.130Z: [32minfo[39m: Retrieved tags
+2025-01-07T07:29:47.716Z: [32minfo[39m: Retrieved posts with filters: {}
+2025-01-07T08:07:35.075Z: [32minfo[39m: Retrieved posts with filters: {"sort":"createdAt","page":"1","limit":"10","keyword":"i"}
+2025-01-07T08:07:44.600Z: [32minfo[39m: Retrieved posts with filters: {"sort":"createdAt","page":"1","limit":"10","keyword":"z"}
+2025-01-07T08:07:51.448Z: [32minfo[39m: Retrieved posts with filters: {"sort":"createdAt","page":"1","limit":"10","keyword":"Sam"}
+2025-01-07T08:08:07.293Z: [32minfo[39m: Retrieved posts with filters: {}
+2025-01-07T08:09:02.531Z: [31merror[39m: Error retrieving posts: Invalid sort parameter. Allowed values: title, desc
+2025-01-07T08:09:02.564Z: [31merror[39m: 400 - Invalid sort parameter. Allowed values: title, desc - /api/posts - GET - ::1
+2025-01-07T08:09:14.114Z: [31merror[39m: Error retrieving posts: Invalid sort parameter. Allowed values: title, desc
+2025-01-07T08:09:14.118Z: [31merror[39m: 400 - Invalid sort parameter. Allowed values: title, desc - /api/posts - GET - ::1
+2025-01-07T08:09:23.770Z: [31merror[39m: Error retrieving posts: Invalid sort parameter. Allowed values: title, desc
+2025-01-07T08:09:23.771Z: [31merror[39m: 400 - Invalid sort parameter. Allowed values: title, desc - /api/posts - GET - ::1
+2025-01-07T08:09:35.443Z: [31merror[39m: Error retrieving posts: Invalid sort parameter. Allowed values: title, desc
+2025-01-07T08:09:35.446Z: [31merror[39m: 400 - Invalid sort parameter. Allowed values: title, desc - /api/posts - GET - ::1
+2025-01-07T08:09:49.996Z: [31merror[39m: Error retrieving posts: Invalid sort parameter. Allowed values: title, desc
+2025-01-07T08:09:50.000Z: [31merror[39m: 400 - Invalid sort parameter. Allowed values: title, desc - /api/posts - GET - ::1
+2025-01-07T08:09:54.724Z: [32minfo[39m: Retrieved posts with filters: {"sort":"title"}
+2025-01-07T08:10:04.541Z: [31merror[39m: Error retrieving posts: Invalid sort parameter. Allowed values: title, desc
+2025-01-07T08:10:04.543Z: [31merror[39m: 400 - Invalid sort parameter. Allowed values: title, desc - /api/posts?sort=titlev2 - GET - ::1
+2025-01-07T08:10:12.937Z: [31merror[39m: Error retrieving posts: Invalid sort parameter. Allowed values: title, desc
+2025-01-07T08:10:12.939Z: [31merror[39m: 400 - Invalid sort parameter. Allowed values: title, desc - /api/posts - GET - ::1
+2025-01-07T08:10:42.259Z: [31merror[39m: Error retrieving posts: Invalid sort parameter. Allowed values: title, desc
+2025-01-07T08:10:42.260Z: [31merror[39m: 400 - Invalid sort parameter. Allowed values: title, desc - /api/posts - GET - ::1
+2025-01-07T08:11:31.378Z: [32minfo[39m: Retrieved posts with filters: {}
+2025-01-07T08:14:37.535Z: [32minfo[39m: Retrieved posts with filters: {}
+2025-01-07T08:14:48.304Z: [32minfo[39m: Retrieved posts with filters: {"sort":"title"}
+2025-01-07T08:14:56.804Z: [31merror[39m: Error retrieving posts: Invalid sort parameter. Allowed values: createdAt, title, desc
+2025-01-07T08:14:56.808Z: [31merror[39m: 400 - Invalid sort parameter. Allowed values: createdAt, title, desc - /api/posts?sort=titlev - GET - ::1
+2025-01-07T08:15:09.662Z: [32minfo[39m: Retrieved posts with filters: {}
+2025-01-07T08:15:12.169Z: [31merror[39m: Error retrieving posts: Page must be a positive number
+2025-01-07T08:15:12.170Z: [31merror[39m: 400 - Page must be a positive number - /api/posts?page=-1 - GET - ::1
+2025-01-07T08:15:19.744Z: [31merror[39m: Error retrieving posts: Limit must be between 1 and 50
+2025-01-07T08:15:19.746Z: [31merror[39m: 400 - Limit must be between 1 and 50 - /api/posts?limit=100 - GET - ::1
+2025-01-07T08:15:27.450Z: [32minfo[39m: Retrieved posts with filters: {"limit":"50"}
+2025-01-07T08:15:37.147Z: [31merror[39m: Error retrieving posts: Page must be a positive number
+2025-01-07T08:15:37.150Z: [31merror[39m: 400 - Page must be a positive number - /api/posts?sort=title&page=-1&limit=50&keyword=Sam&tag - GET - ::1
+2025-01-07T08:15:46.935Z: [32minfo[39m: Retrieved posts with filters: {"sort":"title","page":"1","limit":"50","keyword":"Sam","tag":""}
+2025-01-07T08:16:22.452Z: [31merror[39m: Error creating post: Title is required
+2025-01-07T08:16:22.454Z: [31merror[39m: 400 - Title is required - /api/posts - POST - ::1
+2025-01-07T08:18:38.264Z: [32minfo[39m: Retrieved tags
+2025-01-07T08:19:08.741Z: [32minfo[39m: Tag created: 677ce37c9035c11eafb3bbbb
+2025-01-07T08:19:13.805Z: [32minfo[39m: Retrieved tags
+2025-01-07T08:19:42.048Z: [32minfo[39m: Retrieved tags
+2025-01-07T08:19:58.425Z: [32minfo[39m: Post created: 677ce3ae9035c11eafb3bbc1
+2025-01-07T08:20:15.116Z: [32minfo[39m: Retrieved posts with filters: {"sort":"title","page":"1","limit":"50","keyword":"Sam","tag":""}
+2025-01-07T08:20:33.346Z: [32minfo[39m: Retrieved posts with filters: {"sort":"title","page":"1","limit":"50","keyword":"Sam","tag":""}
+2025-01-07T08:20:43.539Z: [32minfo[39m: Retrieved posts with filters: {}
+2025-01-07T08:20:58.531Z: [32minfo[39m: Retrieved tags
+2025-01-07T08:21:16.663Z: [31merror[39m: Error creating tag: Tag with this name already exists
+2025-01-07T08:21:16.666Z: [31merror[39m: 409 - Tag with this name already exists - /api/tags - POST - ::1
+2025-01-07T08:23:03.350Z: [31merror[39m: Error creating tag: Tag with  name Software-technology already exists
+2025-01-07T08:23:03.384Z: [31merror[39m: 409 - Tag with  name Software-technology already exists - /api/tags - POST - ::1
+2025-01-07T08:24:24.288Z: [32minfo[39m: Post created: 677ce4b7f521dd592f8a5f2b
+2025-01-07T08:24:45.458Z: [32minfo[39m: Post created: 677ce4cdf521dd592f8a5f2f
+2025-01-07T08:25:47.597Z: [31merror[39m: Error retrieving posts: Invalid query parameter(s): test
+2025-01-07T08:25:47.637Z: [31merror[39m: 400 - Invalid query parameter(s): test - /api/posts?sort=title&page=1&limit=50&keyword=Sam&tag&test=gfdgd - GET - ::1
+2025-01-07T08:25:54.321Z: [32minfo[39m: Retrieved posts with filters: {"sort":"title","page":"1","limit":"50","keyword":"Sam","tag":""}
+2025-01-07T08:26:04.918Z: [32minfo[39m: Retrieved posts with filters: {}
+2025-01-07T08:26:23.145Z: [32minfo[39m: Retrieved posts with filters: {"tag":"677cd409bc550f933a3e48f7"}
+2025-01-07T08:26:42.409Z: [31merror[39m: Error retrieving posts: Invalid query parameter(s): tag"
+2025-01-07T08:26:42.411Z: [31merror[39m: 400 - Invalid query parameter(s): tag" - /api/posts?tag%22=%22677cd409bc550f933a3e48f7%22 - GET - ::1
+2025-01-07T08:26:48.111Z: [31merror[39m: Error retrieving posts: Invalid query parameter(s): tag"
+2025-01-07T08:26:48.113Z: [31merror[39m: 400 - Invalid query parameter(s): tag" - /api/posts?tag%22=677cd409bc550f933a3e48f7 - GET - ::1
+2025-01-07T08:27:00.822Z: [32minfo[39m: Retrieved posts with filters: {"tag":"677cd409bc550f933a3e48f7"}
+2025-01-07T08:31:11.895Z: [32minfo[39m: Retrieved posts with filters: {"tag":"677cd409bc550f933a3e48f7"}
+2025-01-07T08:31:43.554Z: [32minfo[39m: Retrieved posts with filters: {"tag":"677ce37c9035c11eafb3bbbb"}
+2025-01-07T08:35:42.867Z: [31merror[39m: 400 - Invalid file type. Allowed types: JPG, JPEG, PNG, WEBP - /api/posts - POST - ::1
+2025-01-07T08:39:02.006Z: [31merror[39m: 400 - File too large. Max size is 5MB - /api/posts - POST - undefined
+2025-01-07T08:39:37.870Z: [31merror[39m: 400 - File too large. Max size is 5MB - /api/posts - POST - undefined
+2025-01-07T08:40:33.120Z: [31merror[39m: 400 - File too large. Max size is 5MB - /api/posts - POST - ::1
+2025-01-07T08:41:32.432Z: [32minfo[39m: Post created: 677ce8bce42de00fb21e16e4
+2025-01-07T08:43:45.899Z: [32minfo[39m: Post created: 677ce94158848184ecfc4966
+2025-01-07T08:49:19.706Z: [31merror[39m: Error creating post: Title is required
+2025-01-07T08:49:19.720Z: [31merror[39m: 400 - Title is required - /api/posts - POST - ::1
+2025-01-07T08:53:16.821Z: [32minfo[39m: Retrieved tags
+2025-01-07T08:55:45.994Z: [31merror[39m: Error retrieving tags: Page must be a positive number
+2025-01-07T08:55:46.001Z: [31merror[39m: 400 - Page must be a positive number - /api/tags?page&limit&sort&search=Sof - GET - ::1
+2025-01-07T08:55:59.216Z: [31merror[39m: Error retrieving tags: Limit must be between 1 and 100
+2025-01-07T08:55:59.217Z: [31merror[39m: 400 - Limit must be between 1 and 100 - /api/tags?page=1&limit&sort&search=Sof - GET - ::1
+2025-01-07T08:56:05.238Z: [31merror[39m: Error retrieving tags: Invalid field "" passed to sort()
+2025-01-07T08:56:05.242Z: [31merror[39m: 500 - Invalid field "" passed to sort() - /api/tags?page=1&limit=100&sort&search=Sof - GET - ::1
+2025-01-07T08:56:16.631Z: [32minfo[39m: Retrieved tags
+2025-01-07T08:56:27.299Z: [32minfo[39m: Retrieved tags
+2025-01-07T08:57:51.445Z: [32minfo[39m: Retrieved tags
+2025-01-07T09:00:34.774Z: [32minfo[39m: Retrieved tags
+2025-01-07T09:00:53.797Z: [31merror[39m: Error retrieving tags: Invalid query parameter(s): sort
+2025-01-07T09:00:53.809Z: [31merror[39m: 400 - Invalid query parameter(s): sort - /api/tags?page=1&limit=100&sort=name&search=z - GET - ::1
+2025-01-07T09:00:59.973Z: [31merror[39m: Error retrieving tags: Invalid query parameter(s): sort
+2025-01-07T09:00:59.977Z: [31merror[39m: 400 - Invalid query parameter(s): sort - /api/tags?page=1&limit=100&sort=name&search=z - GET - ::1
+2025-01-07T09:01:05.540Z: [32minfo[39m: Retrieved tags with filters: {"page":"1","limit":"100","search":"z"}
+2025-01-07T09:01:17.315Z: [32minfo[39m: Retrieved tags with filters: {"page":"1","limit":"100","search":"s"}
+2025-01-07T09:01:26.183Z: [32minfo[39m: Retrieved tags with filters: {"page":"1","limit":"100","search":"s"}
+2025-01-07T09:01:39.146Z: [32minfo[39m: Retrieved tags with filters: {}
+2025-01-07T09:06:43.149Z: [32minfo[39m: Retrieved tags with filters: {}
+2025-01-07T09:06:55.977Z: [32minfo[39m: Retrieved posts with filters: {}
+2025-01-07T09:09:13.001Z: [31merror[39m: Error retrieving posts: Page must be a positive number
+2025-01-07T09:09:13.042Z: [31merror[39m: 400 - Page must be a positive number - /api/posts?sort&page&limit&keyword&tag - GET - ::1
+2025-01-07T09:09:20.166Z: [32minfo[39m: Retrieved posts with filters: {}
+2025-01-07T09:09:26.771Z: [32minfo[39m: Retrieved posts with filters: {"keyword":"x"}
+2025-01-07T09:09:32.998Z: [32minfo[39m: Retrieved posts with filters: {"keyword":""}
+2025-01-07T09:09:39.810Z: [32minfo[39m: Retrieved posts with filters: {"keyword":""}
+2025-01-07T09:09:54.251Z: [32minfo[39m: Retrieved posts with filters: {"limit":"2"}
+2025-01-07T09:10:03.117Z: [32minfo[39m: Retrieved posts with filters: {"limit":"1"}
+2025-01-07T09:10:15.449Z: [31merror[39m: Error retrieving posts: Limit must be between 1 and 50
+2025-01-07T09:10:15.451Z: [31merror[39m: 400 - Limit must be between 1 and 50 - /api/posts?limit=0 - GET - ::1
+2025-01-07T09:11:40.653Z: [32minfo[39m: Retrieved posts with filters: {}
+2025-01-07T09:12:38.027Z: [32minfo[39m: Tag created: 677cf00500cb0f2087c155f5
+2025-01-07T09:12:41.862Z: [31merror[39m: Error creating tag: Tag with  name frontend already exists
+2025-01-07T09:12:41.865Z: [31merror[39m: 409 - Tag with  name frontend already exists - /api/tags - POST - ::1
+2025-01-07T09:12:50.947Z: [32minfo[39m: Tag created: 677cf01200cb0f2087c155f9
+2025-01-07T09:13:03.593Z: [32minfo[39m: Retrieved tags with filters: {}
+2025-01-07T09:13:43.267Z: [31merror[39m: Error retrieving tags: Page must be a positive number
+2025-01-07T09:13:43.269Z: [31merror[39m: 400 - Page must be a positive number - /api/tags?page&limit&search=x - GET - ::1
+2025-01-07T09:13:50.184Z: [32minfo[39m: Retrieved tags with filters: {"search":"x"}
+2025-01-07T09:13:56.113Z: [32minfo[39m: Retrieved tags with filters: {"search":"fr"}
+2025-01-07T09:14:03.924Z: [31merror[39m: Error retrieving tags: Page must be a positive number
+2025-01-07T09:14:03.926Z: [31merror[39m: 400 - Page must be a positive number - /api/tags?page&limit&search= - GET - ::1
+2025-01-07T09:14:14.301Z: [32minfo[39m: Retrieved tags with filters: {"limit":"1"}
+2025-01-07T09:14:21.312Z: [32minfo[39m: Retrieved tags with filters: {"limit":"2"}
+2025-01-07T09:14:28.144Z: [32minfo[39m: Retrieved tags with filters: {}
+2025-01-07T09:20:02.060Z: [31merror[39m: Error creating post: Title is required
+2025-01-07T09:20:02.082Z: [31merror[39m: 400 - Title is required - /api/posts - POST - ::1
+2025-01-07T09:20:15.127Z: [32minfo[39m: Post created: 677cf1ce00cb0f2087c15608
+2025-01-07T09:20:40.853Z: [32minfo[39m: Retrieved posts with filters: {}
+2025-01-07T09:22:05.824Z: [32minfo[39m: Post created: 677cf23d00cb0f2087c15610
+2025-01-07T09:22:31.263Z: [32minfo[39m: Retrieved posts with filters: {}
+2025-01-07T09:24:27.604Z: [32minfo[39m: Retrieved posts with filters: {}
+2025-01-07T09:25:02.997Z: [32minfo[39m: Post created: 677cf2ee00cb0f2087c1561b
+2025-01-07T09:25:11.450Z: [32minfo[39m: Retrieved posts with filters: {}
+2025-01-07T09:25:25.680Z: [32minfo[39m: Retrieved posts with filters: {}
+2025-01-07T09:25:38.089Z: [32minfo[39m: Retrieved posts with filters: {"limit":"1"}
+2025-01-07T09:25:47.653Z: [32minfo[39m: Retrieved posts with filters: {"page":"2","limit":"1"}
+2025-01-07T09:26:09.607Z: [32minfo[39m: Retrieved posts with filters: {"page":"1","limit":"1"}
+2025-01-07T09:26:22.126Z: [32minfo[39m: Retrieved posts with filters: {"page":"1","limit":"10"}
+2025-01-07T09:26:51.984Z: [31merror[39m: Error retrieving posts: Invalid sort parameter. Allowed values: createdAt, title, desc
+2025-01-07T09:26:51.988Z: [31merror[39m: 400 - Invalid sort parameter. Allowed values: createdAt, title, desc - /api/posts?sort=name&page=1&limit=10 - GET - ::1
+2025-01-07T09:26:59.384Z: [32minfo[39m: Retrieved posts with filters: {"sort":"title","page":"1","limit":"10"}
+2025-01-07T09:27:40.818Z: [32minfo[39m: Retrieved posts with filters: {"tag":"677cf01200cb0f2087c155f9"}
+2025-01-07T09:29:15.768Z: [32minfo[39m: Retrieved posts with filters: {"tag":"677cf01200cb0f2087c155f9"}
+2025-01-07T09:29:24.460Z: [32minfo[39m: Retrieved posts with filters: {"tag":"677cf01200cb0f2087c155f9"}
+2025-01-07T09:29:38.369Z: [32minfo[39m: Retrieved posts with filters: {"keyword":"fr"}
+2025-01-07T09:29:47.411Z: [32minfo[39m: Retrieved posts with filters: {"keyword":"bac"}
+2025-01-07T09:30:06.207Z: [32minfo[39m: Retrieved posts with filters: {"keyword":"b"}
+2025-01-07T09:30:19.077Z: [32minfo[39m: Retrieved posts with filters: {}
+2025-01-07T09:30:40.868Z: [32minfo[39m: Retrieved posts with filters: {}
+2025-01-07T09:30:43.767Z: [32minfo[39m: Retrieved posts with filters: {"keyword":"JavaScript"}
+2025-01-07T09:31:02.882Z: [32minfo[39m: Retrieved posts with filters: {"sort":"title","page":"1","limit":"10","keyword":"JavaScript","tag":"677cf01200cb0f2087c155f9"}
+2025-01-07T09:31:10.404Z: [32minfo[39m: Retrieved posts with filters: {}
+2025-01-07T09:38:52.942Z: [32minfo[39m: Retrieved tags with filters: {}
+2025-01-07T09:39:10.411Z: [32minfo[39m: Retrieved tags with filters: {}
+2025-01-07T09:40:48.635Z: [32minfo[39m: Retrieved posts with filters: {}
+2025-01-07T09:44:02.468Z: [32minfo[39m: Tag created: 677cf7620cbc305e26139ae6
+2025-01-07T09:44:57.542Z: [32minfo[39m: Retrieved posts with filters: {"limit":"1"}
+2025-01-07T09:46:50.137Z: [32minfo[39m: Retrieved tags with filters: {}
+2025-01-07T09:47:30.237Z: [32minfo[39m: Post created: 677cf8310cbc305e26139aee
+2025-01-07T10:05:39.947Z: [32minfo[39m: Retrieved tags with filters: {}

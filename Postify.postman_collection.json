@@ -1,0 +1,155 @@
+{
+  "info": {
+    "name": "Postify API",
+    "_postman_id": "postify-api-collection",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": "API collection for Postify - A Post and Tag Management System"
+  },
+  "item": [
+    {
+      "name": "Health Check",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/health",
+        "description": "Check if the server is running"
+      }
+    },
+    {
+      "name": "Tags",
+      "item": [
+        {
+          "name": "Get All Tags",
+          "request": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/tags",
+            "description": "Get tags with pagination and search functionality",
+            "query": [
+              {
+                "key": "page",
+                "value": "1",
+                "description": "Page number (min: 1)"
+              },
+              {
+                "key": "limit",
+                "value": "10",
+                "description": "Items per page (min: 1, max: 100)"
+              },
+              {
+                "key": "search",
+                "value": "",
+                "description": "Search tags by name (case-insensitive)"
+              }
+            ]
+          }
+        },
+        {
+          "name": "Create Tag",
+          "request": {
+            "method": "POST",
+            "url": "{{baseUrl}}/api/tags",
+            "description": "Create a new tag (name: 2-30 characters)",
+            "header": {
+              "Content-Type": "application/json"
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"sample-tag\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Posts",
+      "item": [
+        {
+          "name": "Get All Posts",
+          "request": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/posts",
+            "description": "Get posts with filtering, sorting and pagination",
+            "query": [
+              {
+                "key": "sort",
+                "value": "createdAt",
+                "description": "Sort by field (allowed: createdAt, title, desc)"
+              },
+              {
+                "key": "page",
+                "value": "1",
+                "description": "Page number (min: 1)"
+              },
+              {
+                "key": "limit",
+                "value": "10",
+                "description": "Items per page (min: 1, max: 50)"
+              },
+              {
+                "key": "keyword",
+                "value": "",
+                "description": "Search in title and description"
+              },
+              {
+                "key": "tag",
+                "value": "",
+                "description": "Filter by tag IDs (comma-separated for multiple)"
+              }
+            ]
+          }
+        },
+        {
+          "name": "Create Post",
+          "request": {
+            "method": "POST",
+            "url": "{{baseUrl}}/api/posts",
+            "description": "Create a new post with image upload (max 5MB)",
+            "header": {
+              "Content-Type": "multipart/form-data"
+            },
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "title",
+                  "type": "text",
+                  "value": "",
+                  "description": "Post title (3-100 characters)"
+                },
+                {
+                  "key": "desc",
+                  "type": "text",
+                  "value": "",
+                  "description": "Post description (10-5000 characters)"
+                },
+                {
+                  "key": "tags",
+                  "type": "text",
+                  "value": "[]",
+                  "description": "Array of tag IDs (max 10 tags)"
+                },
+                {
+                  "key": "image",
+                  "type": "file",
+                  "description": "Image file to upload (optional)",
+                  "src": null
+                }
+              ]
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:8000",
+      "type": "string"
+    }
+  ]
+} 
